@@ -1,0 +1,316 @@
+// hello world from sections sass
+
+// first section
+
+.needHelp {
+  position: fixed;
+  width: 50px;
+  //background-color: $section-clr2;
+  border-color: $secod-clr;
+  border-radius: 2em;
+  right: 0.5%;
+  top: 50%;
+  color: $main-clr;
+  transition: all 0.2s ease-in;
+
+  i {
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+    opacity: 0.6;
+  }
+
+  .tog-i {
+    opacity: 1;
+  }
+
+  .tgc {
+    color: $secod-clr !important;
+  }
+
+  ul {
+    li {
+      direction: rtl;
+      transition: all 0.2s ease-in;
+      text-transform: none;
+      font-size: small;
+      opacity: 0.6;
+      margin: 0.5em;
+      list-style: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.dark-background {
+  background: $section-clr2;
+}
+
+.section.one {
+  min-height: 700px;
+
+  .btn {
+    color: $main-clr;
+    border-radius: 2em;
+
+    &:hover {
+      box-shadow: 1px 1px 1px 1px #0000;
+    }
+  }
+
+  .btn.hvr-fade {
+    transition: all 0.15s ease;
+    font-size: 2.5rem;
+  }
+
+  .btn.focus,
+  .btn:focus {
+    box-shadow: none;
+    background-color: transparent !important;
+  }
+
+  .btn:hover {
+    background: transparent !important;
+  }
+
+  .smart-phone {
+    margin-top: -2em;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  button:hover i[class="fab fa-android"] {
+    color: #a3c439;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  button:hover i[class="fab fa-apple"] {
+    color: #666666;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  button:hover i[class="fab fa-windows"]:hover {
+    color: #00aef5;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.sectionTwo {
+
+  min-height: 700px;
+  background-color: $secod-clr;
+
+  img {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    //background: $main-clr;
+    border-radius: 50%;
+    border: 2px solid $main-clr;
+    transition: all 0.25s ease;
+
+    &:hover {
+      //opacity: 0.7;
+      filter: grayscale(100%);
+    }
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $main-clr;
+  }
+
+  .slick-dots {
+    position: static;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .lead {
+    font-size: 1em;
+
+  }
+
+  .slick-slide,
+  .slick-current,
+  .slick-active {
+    outline: none !important;
+  }
+}
+
+.main-clr {
+  background-color: $main-clr;
+}
+
+.sectionThree {
+  max-height: 700px;
+  overflow: hidden;
+  background: url("../IMGS/astronomy-cosmos-dark-733475.jpg") no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+  color: $main-clr;
+
+  .container-fluid {
+    background-color: rgba(52, 77, 92, 0.700);
+    height: 100%;
+    padding: 3rem !important;
+  }
+
+  .lead {
+    font-size: 1em;
+  }
+
+  .h5 {
+    opacity: 0.8;
+  }
+
+  .mt-4D {
+    margin-top: 3rem;
+  }
+
+  .b-r {
+    border-right: 2px solid $main-clr;
+  }
+
+  .btn-primary {
+    background-color: $section-clr2;
+    border-radius: 2em;
+    border: 3px solid $section-clr2;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show>.btn-primary.dropdown-toggle {
+    background-color: $main-clr;
+    border-color: $main-clr;
+    color: $secod-clr;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .btn-primary:not(:disabled):not(.disabled):active:focus,
+  .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(223, 75, 77, 0.274);
+  }
+
+  .btn-primary.focus,
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(223, 75, 77, 0.274);
+  }
+}
+
+.section4 {
+  color: $secod-clr;
+  text-transform: capitalize;
+  background-color: $main-clr;
+
+  a {
+    color: $secod-clr;
+    text-transform: uppercase;
+  }
+
+  button {
+    text-transform: uppercase;
+    background-color: $section-clr2;
+    border-color: $section-clr2;
+    z-index: 5555;
+  }
+
+  li.active {
+    background: $section-clr1;
+    border-color: $section-clr1;
+    text-transform: uppercase;
+  }
+
+}
+
+.sectionFive {
+  color: $section-clr2;
+  max-height: 700px;
+
+  .btn-primary {
+    background-color: $section-clr2;
+    border-color: $section-clr2;
+    margin-top:15px;
+    border-radius: 2em;
+    &:active {
+      background-color: $main-clr !important;
+      border-color: $main-clr !important;
+      color: $section-clr2 !important;
+
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
+    }
+
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .btn-primary:not(:disabled):not(.disabled):active:focus,
+  .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
+  }
+  .form-control:focus{
+    box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
+    border-color: $section-clr2;
+  }
+  .lead{
+    line-height: 3;
+  }
+}
+
+footer{
+  background: $section-clr1;
+
+  .list-group-item{
+    padding-left:0 !important;
+  }
+  .list-group li{
+    background: transparent;
+    border:none;
+    opacity: 0.8;
+    a{
+      color:$main-clr;
+    }
+  } 
+  .nav a{
+    color:$main-clr;
+    opacity: 0.8;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  i{
+    font-size:1.5em;
+  }
+  small{
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .social-foter a{
+    font-size: small;
+  }
+
+}
+.copy-rights{
+background-color: rgb(36, 52, 63);
+}

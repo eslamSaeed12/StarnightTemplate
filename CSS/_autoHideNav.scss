@@ -1,0 +1,47 @@
+// start styling navbar
+
+// varialbes
+.navheader {
+  z-index: 9999;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+  background : {
+    color: $main-clr;
+  }
+  //box-shadow: 0.5px 0.5px 0.5px  0.5px $secod-clr;
+  box-shadow:8px 2px 6px 0.5px $section-clr1;
+  text-transform: capitalize;
+
+  a:not(.navbar-brand) {
+    color: $secod-clr;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    margin-left: 1.5em;
+  }
+
+  .navbar-nav .nav-link:active {
+    color: $section-clr2;
+  }
+
+  .navbar-brand {
+    font-size: 2rem;
+    color: $section-clr1 !important;
+  }
+
+  .hvr-outline-out:before {
+    border-color: #304753a9 !important;
+  }
+  .other-rng {
+    color: $secod-clr;
+  }
+
+  .sign li,a{
+    text-transform: none;
+  }
+}
+
+
+ 

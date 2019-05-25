@@ -1,0 +1,51 @@
+//variables 
+
+
+
+// main colors 
+$section-clr1:#344D5C;
+$section-clr2:#DF4B4D;
+$section-clr3:#B05153;
+$section-clr4:#875257;
+// fonts colors  
+$main-clr:#ECF0F1;
+$secod-clr:#344D5C;
+// buttons colors 
+$btn-clr1:#875257;
+$btn-clr2:#344D5C;
+// hovers colors 
+$hvr-clr1:#344D5C;
+$hvr-clr2:#DF4B4D;
+
+// 
+
+
+// import components from sass folder 
+
+
+@import '_hdr';
+@import '_sctns';
+@import '_autoHideNav';
+
+// some variables tags 
+.cptl {
+    text-transform: capitalize;
+}
+
+.uprCase {
+    text-transform: uppercase;
+}
+
+body{
+    
+        color:$main-clr !important;
+        font-family: 'Libre Franklin', sans-serif;
+    
+}
+
+.contrast-p{
+    font-weight: 350;
+}
+
+
+/* end of style */
