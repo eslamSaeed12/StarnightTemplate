@@ -1,10 +1,10 @@
 header {
-    min-height: 700px;
-    background: url("../IMGS/backlit-dawn-dusk-2292833.jpg") center center no-repeat;
+    min-height: 100vh;
+    background: url("../IMGS/sky.gif")
+        /*url("../imgs/girl-walking-wall-32246.jpg") center center no-repeat;*/
+    ;
     background-size: cover;
     overflow: hidden;
-
-
     .inh-height // inherit height 
 
         {
@@ -13,57 +13,54 @@ header {
 
     .bt-rds {
         // video player play icon border radius
-        border: 3px solid $main-clr;
+        border: 3px solid #F2F2F2;
         display: inline-block;
         border-radius: 50%;
+        font-size: 2em;
+        padding: 1.4vw;
     }
-
-    i {
-        cursor: pointer;
-    }
-
-    .overlay-hd {
-        background-color: rgba(96, 81, 90, 0.445)
-    }
-
-    .btn-primary {
-        background-color: $btn-clr2 !important;
-        border-radius: 2em;
-        border: 2px solid $main-clr !important;
-        color: $main-clr;
-    }
-
-
-    .btn-primary:hover {
-        background-color:$main-clr !important;
-        color: $section-clr2;
-    }
-
-    .btn-primary:not(:disabled):not(.disabled).active,
-    .btn-primary:not(:disabled):not(.disabled):active,
-    .show>.btn-primary.dropdown-toggle {
-        color: $secod-clr;
-    }
-
-    .hvr-fade:focus,
-    .hvr-fade:hover {
-        background-color: $hvr-clr1;
-        color: inherit;
-    }
-
-    .hvr-fade:active {
-        color: $secod-clr;
-    }
-
-    .btn-primary.focus,
-    .btn-primary:focus,
-    .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .btn-primary:not(:disabled):not(.disabled):active:focus,
-    .show>.btn-primary.dropdown-toggle:focus {
-        box-shadow: 0 0 0 0.2rem rgba($secod-clr, 0.8) !important;
-    }
-
 }
 
+i {
+    cursor: pointer;
+}
+
+.overlay-hd {
+    background-color: #f2b90c81;
+    //background-color: #f2b90ce0;
+}
+
+.btn-primary {
+    background-color: $section-clr2;
+    border-radius: 2em;
+    border: 2px solid $main-clr;
+    color: $main-clr;
+    transition: all 0.1s ease-in;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    background-color: $main-clr;
+    border-color: $section-clr2;
+    color: $section-clr2;
+}
+
+.btn-primary:hover {
+    color: $main-clr;
+    background-color: $section-clr2;
+    border-color: $main-clr;
+}
+
+.hvr-fade:hover {
+    background-color: $section-clr2;
+}
+
+.hvr-fade:focus,
+.hvr-fade:active {
+
+    background-color: $main-clr;
+    color: $section-clr2;
+}
 
 // customize tooltip colors 

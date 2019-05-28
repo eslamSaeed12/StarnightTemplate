@@ -1,0 +1,27 @@
+.signup-section{
+
+    min-height: 100vh;
+    background-color: $section-clr1 !important;
+    color:$third-clr ;
+    .cust-card h3{
+        color:$third-clr !important;
+    }
+
+    .forma{
+
+        border-right: 2px solid $third-clr;
+        
+    }
+    .form-control:focus{
+
+        box-shadow: unset !important;
+    }
+    span{
+        color:$section-clr2 !important;
+        font-size:1em;
+    }
+
+    i{
+        color:$section-clr2 !important;
+    }
+}

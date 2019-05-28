@@ -14,31 +14,102 @@
   <link rel="stylesheet" href="CSS/hover-min.css" type="text/css" />
   <!-- fonts -->
   <link rel="stylesheet" href="CSS/all.min.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
   <!-- slick theme -->
   <link rel="stylesheet" href="CSS/slick.css" />
   <!-- slick theme -->
   <link rel="stylesheet" href="CSS/slick-theme.css" />
   <!--buttons surge lib-->
-  <link rel="stylesheet" href="CSS/bttn.min.css" type="text/css" />
+  <link rel="stylesheet" href="CSS/animate.css" type="text/css" />
   <!-- hint  -->
   <link rel="stylesheet" href="CSS/simple-hint.min.css" type="text/css" />
 
   <!-- Place your stylesheet here-->
   <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+  <link href="CSS/MediaQueryHandle.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-  <div class="needHelp text-center">
-    <i class="fa fa-question-circle mt-2" data-toggle="tooltip" data-placement="left" title="Need Help ?"></i>
-    <ul class="">
-      <li class="tgc">download</li>
-      <li class="tgc">testimonials</li>
-      <li class="tgc">features</li>
-      <li class="tgc">prices</li>
-      <li class="tgc">contact</li>
-    </ul>
+  <!-- modal sign in -->
+  <div class="secondery-navbar-open fixed-top px-5 py-3">
+    <div class="container-fluid px-0">
+      <div class="row">
+        <ul class="nav col-12 mr-auto text-right menu-trigger">
+          <li class="ml-auto">
+            <i class="fa fa-bars" onclick="navToggle()"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+  <div class="secondery-navbar" id="mySidenav" class="sidenav">
+    <div class="container">
+      <i class="fa fa-times btn-close mt-4" onclick="leftMenuClose()"></i>
+      <ul class="list-unstyled ml-0 trn">
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left"
+            onclick="linkScroll(this,702)">download</a></li>
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left"
+            onclick="linkScroll(this,1420)">our clients</a></li>
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left"
+            onclick="linkScroll(this,2060)">features</a></li>
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left"
+            onclick="linkScroll(this,2780)">pricing</a></li>
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left"
+            onclick="linkScroll(this,3490)">contact</a></li>
+        <li class="nav-item"><a href="javscript:void(0)" class="nav-link hvr-underline-from-left" data-toggle="modal"
+            data-target="#modal-sign-in">sign in</a></li>
+        <li class="nav-item"><a href="signup.html" class="nav-link hvr-underline-from-left">sign up</a></li>
+      </ul>
+    </div> <!-- end container-->
+  </div>
+  <!-- Modal -->
+  <div class="modal fade modal-signIn" id="modal-sign-in" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <form role="form">
+
+            <label class="w-75">
+              <span class="fa fa-envelope mr-1"></span>
+              <input type="email" class="form-control w-75 d-inline" placeholder="Email">
+            </label>
+
+            </br>
+
+            <label class="mt-4 w-75">
+              <span class="fa fa-lock mr-1"></span>
+              <input type="text" class="form-control w-75 d-inline" placeholder="Password">
+              </br>
+              <small class="ml-4 pt-3">
+                <a href="javascript:void(0)" class="">reset your password</a>
+              </small>
+            </label>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal sign in -->
+
   <!-- start header -->
 
   <header class="main-header text-center">
@@ -46,14 +117,15 @@
       <!-- start containers -->
 
       <div class="container inh-height">
-        <div class="content-header d-flex flex-column inh-height justify-content-around">
+        <div class="content-header min-height  inh-height d-flex  flex-column justify-content-around ">
           <div class="headers">
             <!-- h headers -->
 
-            <h2 class="display-2 uprCase font-weight-bold">
+            <h2 class="display-2 uprCase font-weight-bold zoomIn animated slow">
               <span class=""> starnight </span>
               app
             </h2>
+            <h4 class="type"></h4>
             <p class="pt-5 lead f-md contrast-p">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut
@@ -66,17 +138,17 @@
 
           <div class="video-icon">
             <i class="fa fa-play fa-lg play-icon 
-                        bt-rds py-4 px-4 hvr-fade" data-toggle="tooltip" data-placement="top" title="Watch APP Demo">
+                        bt-rds   hvr-fade" data-toggle="tooltip" data-placement="top" title="Watch APP Demo">
             </i>
           </div>
-
           <!-- button -->
-          <div class="button-sec">
-            <button class="btn btn-primary app-down cptl hvr-grow  btn-lg m-auto font-weight-light f-2em px-4 py-2"
-              data-toggle="tooltip" data-placement="top" title="Download The App">
+          <div class="button-sec pb-sm-4">
+            <button class="btn btn-primary ml-2 app-down cptl hvr-grow  btn-lg start-now" data-toggle="tooltip"
+              data-placement="top" title="Download The App">
               Start Now
             </button>
           </div>
+
         </div>
         <!-- end of content header -->
       </div>
@@ -86,47 +158,64 @@
   </header>
 
   <!-- start navbar header-->
+  <div class="position-fixed menu-toggler-aside navbar-normal">
+    <i class="fa fa-bars"></i>
+  </div>
 
-  <div class="navheader fixed-top">
-    <div class="container-fluid navbar p-0 m-0">
+  <div class="navbar navbar-normal">
+    <div class="container-fluid p-0 m-0 navheader fixed-top fix-header-flow">
       <!-- start contianer -->
-      <div class="container p-0">
-        <nav class="navbar navbar-expand-lg w-100 my-1 p-0">
+      <div class="container p-0 position-relative">
+        <nav class="navbar navbar-expand-md w-100  pt-2">
           <!-- brand -->
-          <a class="navbar-brand uprCase fifth-clr my-1" href="#"><i class="fa fa-home"></i></a>
-          <!-- button toggler-->
-          <button class="navbar-toggler hvr-outline-out" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fa fa-bars f-2em fifth-clr"></i>
+          <a class="navbar-brand uprCase fifth-clr " href="#">start night</a>
           </button>
           <!-- nav components -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto">
-              <li class="nav-item active">
-                <a class="nav-link active" href="#">
-                  <span class="sr-only">(current)</span></a>
+          <div class="collapse navbar-collapse" id="">
+            <ul class="navbar-nav m-lg-auto ml-md-auto">
+              <li class="nav-item">
+                <a id="download" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,702)">download</a>
+              </li>
+              <li class="nav-item handle-menu-md-h">
+                <a id="clients" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,1420)">our
+                  clients</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link hvr-float" href="javascript:void(0)">download</a>
+                <a id="prices" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,2060)">prices</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-float" href="javascript:void(0)">testimonials</a>
+              <li class="nav-item handle-menu-md-h">
+                <a id="feet" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,2780)">features</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-float" href="javascript:void(0)">prices</a>
+              <li class="nav-item handle-menu-md-h">
+                <a id="contact" class="nav-link" href="javascript:void(0)" onclick="linkScroll(this,3490)">contact</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-float" href="javascript:void(0)">features</a>
+              <li class="nav-item dropdown handle-menu-md d-none">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  others
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a id="feet" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,2780)">features</a>
+                  <a id="clients" class="nav-link " href="javascript:void(0)" onclick="linkScroll(this,1420)">our
+                    clients</a>
+                  <a href="javascript:void(0)" class="nav-link signin" data-toggle="modal"
+                    data-target="#modal-sign-in">sign in</a>
+                  <a href="signup.html" class="nav-link signup">sign up</a>
+                </div>
+
               </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-float" href="javascript:void(0)">contact</a>
-              </li>
+
             </ul>
             <ul class="navbar-nav ml-auto sign">
-              <li class="nav-item"> <a href="#" class="nav-link hvr-float">sign in</a></li>
-              <li class="nav-item"> <a href="#" class="nav-link hvr-float">sign up</a></li>
-
+              <li class="nav-item handle-menu-md handle-menu-md-h">
+                <a href="javascript:void(0)" class="nav-link signin" data-toggle="modal"
+                  data-target="#modal-sign-in">sign in</a>
+              </li>
+              <li class="nav-item handle-menu-md-h">
+                <a href="signup.html" class="nav-link signup">sign up</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -136,41 +225,40 @@
     <!-- end of container fluid -->
   </div>
   <!-- end of navbar header -->
-
   <!-- start first section -->
-  <div class="section one p-5 dark-background">
-    <div class="container py-5">
-      <div class="row py-4">
+  <div class="section one dark-background min-height py-5">
+    <div class="container">
+      <div class="row min-height ">
         <div class="col-lg-6 col-sm-12">
-          <h2 class="h1  cptl pt-2">
+          <h2 class="h1  cptl mb-4">
             See the sky even better than your own eyes can
           </h2>
-          <p class="lead f-md mt-4">
+          <p class="lead f-md py-4">
             Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur. Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <p class="lead f-md mt-4">
+          <p class="lead f-md">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
             dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
           </p>
-          <div class="bttn-container text-left mt-3">
-            <button class="mt-1 btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
+          <div class="bttn-container text-left my-4">
+            <button class=" btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
               <i class="fab fa-android" title="android os"></i>
             </button>
-            <button class="mt-1 btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
+            <button class=" btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
               <i class="fab fa-apple" title="apple os"></i>
             </button>
-            <button class="mt-1 btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
+            <button class=" btn btn-danger-outline hvr-fade hvr-grow-shadow f-h-em font-weight-light">
               <i class="fab fa-windows" title="windows phone os"></i>
             </button>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-12 smart-phone-dad px-5">
+        <div class="col-lg-6 col-sm-12 smart-phone-dad">
           <img class="img-fluid smart-phone" src="IMGS/f8b0bd98c306b4609873ddae591181b1.png" alt="smart phone"
             title="smart-phone" />
         </div>
@@ -182,34 +270,33 @@
 
   <!-- start section 2 testimonials -->
 
-  <div class="sectionTwo text-center testimon p-5">
-    <h2 class="h1-responsive font-weight-bold my-1">
-      Responsive Testimonials
+  <div class="sectionTwo text-center testimon min-height py-5">
+    <h2 class="h1-responsive font-weight-bold ">
+      Our Clients Teels
     </h2>
 
-    <div class="container py-3">
+    <div class="container ">
       <!-- start container -->
-
-      <div class="slick text-center">
-        <div class="py-1">
-          <img src="IMGS/woman.jpg " class="img-fluid testi-radius my-3 text-center" title="someone" />
-          <p class="lead font-weight-light mt-3">
+      <div class="slick text-center ">
+        <div class="mt-5">
+          <img src="IMGS/woman.jpg " class="img-fluid testi-radius text-center mb-5" title="someone" />
+          <p class="lead ">
             I couldnt possibly use my own eyes to look at the stars, <br />
             thansk Starnught App...
           </p>
           <small>Author</small>
         </div>
-        <div class="py-1">
-          <img src="IMGS/man2.jpg" class="img-fluid testi-radius my-3 text-center " title="someone" />
-          <p class="lead font-weight-light mt-3">
+        <div class="mt-5">
+          <img src="IMGS/man2.jpg" class="img-fluid testi-radius  text-center mb-5" title="someone" />
+          <p class="lead ">
             I couldnt possibly use my own eyes to look at the stars,<br />
             thansk Starnught App...
           </p>
           <small>Author</small>
         </div>
-        <div class="py-1">
-          <img src="IMGS/ma3.jpg" class="img-fluid testi-radius my-3 text-center" title="someone" />
-          <p class="lead font-weight-light mt-3">
+        <div class="mt-5">
+          <img src="IMGS/man1.jpg" class="img-fluid testi-radius  text-center mb-5" title="someone" />
+          <p class="lead">
             couldnt possibly use my own eyes to look at the stars,<br />
             thansk Starnught App...
           </p>
@@ -222,11 +309,16 @@
   </div>
   <!-- end section two testimon-->
 
-  <div class="section4 prices text-center p-5">
-    <div class="container-fluid pt-3">
-      <h2 class="mb-5 uprCase">Our Prices</h2>
-      <div class="container mt-5 pb-5">
-        <ul class="nav justify-content-center nav-tabs" id="myTab" role="tablist">
+  <div class="section4 prices text-center min-height py-5">
+    <div class="container-fluid">
+      <div class="">
+        <h2 class="uprCase">Our Prices</h2>
+        <h5 class="lowCase mt-3">
+          have a <a href="#" class="lowCase section-clr2"><span class="badge badge-secondary">coupon ?</span></a>
+        </h5>
+      </div>
+      <div class="container d-flex flex-column align-items-center">
+        <ul class="nav  nav-tabs mt-5" id="myTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="Montly-tab" data-toggle="tab" href="#Montly" role="tab"
               aria-controls="Montly" aria-selected="true">Montly Plan</a>
@@ -237,63 +329,63 @@
           </li>
         </ul>
 
-        <div class="tab-content pt-5 d-flex justify-content-center" id="myTabContent">
-          <div class="tab-pane fade show active" id="Montly" role="tabpanel" aria-labelledby="Montly-tab">
+        <div class="tab-content  min-height  mt-5 d-flex justify-content-center" id="myTabContent">
+          <div class="tab-pane fade show active pb-5" id="Montly" role="tabpanel" aria-labelledby="Montly-tab">
             <div class="row">
-              <ul class="list-group">
-                <li class="list-group-item active">premium Plan</li>
+              <ul class="list-group col-sm-6 col-xs-4 price-list">
+                <li class="list-group-item active premium">premium Plan</li>
                 <li class="list-group-item">6000 Credits</li>
                 <li class="list-group-item">24H Customer Support</li>
                 <li class="list-group-item">Weekly Coupouns</li>
                 <li class="list-group-item">5$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 premium ">Register</button>
               </ul>
-              <ul class="list-group mx-5">
-                <li class="list-group-item active">Standard Plan</li>
+              <ul class="list-group mx-5  mx-sm-0 col-sm-6 mid-price-list">
+                <li class="list-group-item active standard">Standard Plan</li>
                 <li class="list-group-item">3000 Credits</li>
                 <li class="list-group-item">Forms Support</li>
                 <li class="list-group-item">Montly Coupouns</li>
                 <li class="list-group-item">3$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 standard ">Register</button>
               </ul>
-              <ul class="list-group">
-                <li class="list-group-item active">Free Plan</li>
+              <ul class="list-group col-sm-6 mt-5 mx-sm-auto price-list">
+                <li class="list-group-item active free">Free Plan</li>
                 <li class="list-group-item">600 Credits</li>
                 <li class="list-group-item">Forms Support</li>
                 <li class="list-group-item">No Coupouns</li>
                 <li class="list-group-item">0$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 free ">Register</button>
               </ul>
             </div>
           </div>
 
           <!-- price section annual -->
 
-          <div class="tab-pane fade" id="Annual" role="tabpanel" aria-labelledby="Annual-tab">
+          <div class="tab-pane fade pb-5" id="Annual" role="tabpanel" aria-labelledby="Annual-tab">
             <div class="row">
-              <ul class="list-group">
-                <li class="list-group-item active">premium Plan</li>
+              <ul class="list-group col-sm-6  price-list">
+                <li class="list-group-item active premium">premium Plan</li>
                 <li class="list-group-item">72000 Credits</li>
                 <li class="list-group-item">24H Customer Support</li>
                 <li class="list-group-item">Weekly Coupouns</li>
                 <li class="list-group-item">60$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 premium">Register</button>
               </ul>
-              <ul class="list-group mx-5">
-                <li class="list-group-item active">Standard Plan</li>
+              <ul class="list-group mx-5 col-sm-6 mx-sm-0 mid-price-list">
+                <li class="list-group-item active standard">Standard Plan</li>
                 <li class="list-group-item">36000 Credits</li>
                 <li class="list-group-item">Forms Support</li>
                 <li class="list-group-item">Montly Coupouns</li>
                 <li class="list-group-item">36$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 standard">Register</button>
               </ul>
-              <ul class="list-group">
-                <li class="list-group-item active">Free Plan</li>
+              <ul class="list-group col-sm-6 mt-5 mx-sm-auto price-list">
+                <li class="list-group-item active free">Free Plan</li>
                 <li class="list-group-item">6000 Credits</li>
                 <li class="list-group-item">Forms Support</li>
                 <li class="list-group-item">No Coupouns</li>
                 <li class="list-group-item">0$</li>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-danger mt-4 free">Register</button>
               </ul>
             </div>
           </div>
@@ -307,133 +399,113 @@
   <!-- end of section 4 pricing -->
 
   <!-- start section 3 features -->
-  <div class="sectionThree features p-0 main-clr ">
-    <div class="container-fluid">
+  <div class="sectionThree features text-center">
+    <div class="container-fluid min-height d-flex flex-column justify-content-center">
+      <h2 class="d-inline-block cust-hed mb-4 pt-md-5 pt-sm-5">More Than Application</h2>
       <div class="container">
-        <div class="row mt-4">
-          <div class="col-6 b-r">
-            <!-- left sec -->
-
-            <div class="col-12">
-              <div class="text-center mb-4"></div>
-              <h3 class=" mb-3">SO DREAMY</h3>
-              <p class="lead">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum.
-              </p>
-            </div>
-            <div class="col-12 mt-4D">
-              <div class="text-center mb-4"></div>
-              <h3 class="mb-3">APPLE STORE</h3>
-              <p class="lead">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum.
-              </p>
-            </div>
-          </div>
-          <!-- end left sec -->
-
+        <div class="row">
           <!-- start right sec -->
-
-          <div class="col-6 pl-4">
-            <div class="col-12">
-              <div class="text-center mb-4"></div>
-              <h3 class=" mb-3">MORE BUZZ WORDS</h3>
-              <p class="lead">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum.
-              </p>
-            </div>
-
-            <div class="col-12 mt-4D">
-              <div class="text-center mb-4"></div>
-              <h3 class="mb-3">LOW BATTERY EFFECT</h3>
-              <p class="lead">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum.
-              </p>
-            </div>
+          <div class="col-lg-3 col-sm-6 cust-card">
+            <i class="fa fa-lightbulb w-50 mb-4"></i>
+            <h3 class="mb-4">Creative Interface</h3>
+            <p class="lead">
+              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+            </p>
           </div>
-          <!-- end right sec -->
+
+          <div class="cust-card col-lg-3 col-sm-6">
+            <i class="fa fa-handshake w-50 mb-4"></i>
+            <h3 class="mb-4">Free to Use</h3>
+            <p class="lead">
+              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 cust-card">
+            <i class="fab fa-apple w-50 mb-4"></i>
+            <h3 class="mb-4">Apple OS Now</h3>
+            <p class="lead">
+              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-6  cust-card">
+            <i class="fa fa-battery-full w-50 mb-4"></i>
+            <h3 class="mb-4">LOW BATTERY EFFECT</h3>
+            <p class="lead">
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <!-- end row -->
         </div>
-        <!-- end of row -->
-        <div class="text-center mt-5">
-          <button class="btn btn-primary uprCase text-center mt-4 btn-lg">
+        <div class="text-center mt-5 button-price-try-container">
+          <button class="btn btn-primary uprCase text-center btn-lg btn-custom-clr1 ">
             Try Now
           </button>
         </div>
+        <!-- end container -->
       </div>
-      <!-- end of container -->
+
+      <!-- end of fluid -->
     </div>
   </div>
   <!-- end section 3-->
 
-  <div class="sectionFive contact py-5 text-center">
-    <h2 class="uprCase pt-5">leave a message</h2>
-    <div class="container py-5">
-      <div class="row pt-4">
-        <div class="col-6">
+  <div class="sectionFive contact text-center">
+    <div class="container">
+      <div
+        class="py-5 d-flex flex-column justify-content-between justify-items-between align-items-center align-content-between">
+        <h2 class="uprCase pt-">leave a message</h2>
+        <i class="fa fa-envelope mt-5"></i>
+        <div class="col-lg-6 col-md-6 col-sm-12 py-3 mx-auto">
           <form role="form" class="form-group text-left">
             <label for="exampleInputFullName" class="uprCase">Full Name</label>
-            <input type="text" class="fullName form-control" placeholder="Enter Full Name">
-            <br>
+            <input type="text" class="fullName form-control" placeholder="Enter Full Name" />
+            <br />
             <label for="exampleInputEmail1" class="uprCase">Email address</label>
-            <input type="email" class="email form-control" placeholder="Enter Email" id="exampleInputEmail1">
-            <br>
+            <input type="email" class="email form-control" placeholder="Enter Email" id="exampleInputEmail1" />
+            <br />
             <label for="exampleInputEmail1" class="uprCase">Message</label>
             <textarea class="message form-control" placeholder="Enter Message"></textarea>
-            <br>
-            <input type="submit" class="submit btn btn-primary px-4 py-2 " value="SEND">
+            <br />
+            <input type="submit" class="submit btn btn-primary  btn-lg " value="SEND" />
           </form>
         </div>
-        <div class="col-6 d-flex justify-content-center align-items-baseline mt-2">
-          <div class="info">
-            <p class="lead">Robert K. Francois
-              <br>
-              3082 Davis Court
-              <br>
-              Bridgeport, IL 62417
-              <br>
-              618-945-7239
-              <br>
-              RobertKFrancois@jourrapide.com
-            </p>
-          </div>
-        </div>
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
+      </div>
+      <!-- end of row -->
+    </div>
+    <!-- end of container -->
   </div>
-  <footer class="p-5">
+  <footer class="py-5">
     <div class="container">
-      <div class="row d-flex justify-content-around align-items-baseline">
-        <div class="col-4">
-          <h3 class="my-3 uprCase ">faq</h3>
-          <ul class="list-group d-flex align-items-baseline">
-            <li class="list-group-item"><a href="">What cartoons did you watch as a child?</a></li>
-            <li class="list-group-item"><a href="">What do you consider to be your best find?</a></li>
-            <li class="list-group-item"><a href="">What is special about the place you grew up?</a></li>
-            <li class="list-group-item"><a href="">What is special about the place you grew up?</a></li>
+      <div class="row min-height">
+        <div class="col-lg-3 col-md-6 col-sm-6 handle-mar-faq">
+          <h3 class=" uprCase ">faq</h3>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="">What cartoons did you watch as a child?</a>
+            </li>
+            <li class="list-group-item">
+              <a href="">What do you consider to be your best find?</a>
+            </li>
+            <li class="list-group-item">
+              <a href="">What is special about the place you grew up?</a>
+            </li>
+            <li class="list-group-item">
+              <a href="">What is special about the place you grew up?</a>
+            </li>
           </ul>
         </div>
-        <div class="col-3">
-          <h3 class="my-3 uprCase">sitemap</h3>
-          <ul class="nav flex-column d-flex align-items-baseline">
+        <div class="col-lg-3 col-md-6 col-sm-6 sitemap handle-mar">
+          <h3 class=" uprCase">sitemap</h3>
+          <ul class="nav  d-flex flex-column">
             <li class="nav-item">
               <a class="nav-link" href="#">download</a>
             </li>
@@ -451,37 +523,56 @@
             </li>
           </ul>
         </div>
-        <div class="col-3">
-          <h3 class="my-3 uprCase ml-0 pl-0">follow us</h3>
-          <ul class="list-group social-foter d-flex align-items-baseline">
+        <div class="col-lg-3 col-md-6 col-sm-6 mt-md-5 mt-sm-5 handle-mar ">
+          <h3 class=" uprCase ml-0 pl-0">follow us</h3>
+          <ul class="list-group social-foter min-height social-list">
             <li class="list-group-item">
-              <a href=""><i class="fab fa-facebook"></i>
-              </a>
-              <a href="#" class="ml-2 d-inline">www.facebook.com/appUrl</a>
+              <a href=""><i class="fab fa-facebook"></i> </a>
+              <a href="#" class="ml-2 d-inline hide-on-xs">www.facebook.com/appUrl</a>
             </li>
             <li class="list-group-item">
-              <a href=""><i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="ml-2 d-inline">www.twitter.com/appUrl</a>
+              <a href=""><i class="fab fa-twitter"></i> </a>
+              <a href="#" class="ml-2 d-inline hide-on-xs">www.twitter.com/appUrl</a>
             </li>
             <li class="list-group-item">
-              <a href=""><i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="ml-2 d-inline">www.instgram.com/appUrl</a>
+              <a href=""><i class="fab fa-instagram"></i> </a>
+              <a href="#" class="ml-2 d-inline hide-on-xs">www.instgram.com/appUrl</a>
             </li>
             <li class="list-group-item">
-              <a href=""><i class="fab fa-youtube"></i>
-              </a>
-              <a href="#" class="ml-2 d-inline">www.youtube.com/appUrl</a>
+              <a href=""><i class="fab fa-youtube"></i> </a>
+              <a href="#" class="ml-2 d-inline hide-on-xs">www.youtube.com/appUrl</a>
             </li>
           </ul>
         </div>
-      </div><!-- end of row -->
-    </div><!-- end of container-->
+        <div class="search col-lg-3 col-md-6 col-sm-6 mt-md-5 mt-sm-5 handle-mar">
+          <form>
+            <label>
+              <h3 class="uprCase ">search</h3>
+            </label>
+            <input type="search" class="form-control" placeholder="How can we help ?">
+            <button type="submit" value="Search" class="mt-2"><i class="fa fa-search"></i></button>
+          </form>
+          <div class="text-center mt-sm-5">
+            <small>all &copy; copyrights reserved to </small>
+            <br />
+            <small>front-ended by islam saeed may 2019 </small>
+          </div>
+        </div>
+      </div>
+      <!-- end of row -->
+    </div>
+    <!-- end of container-->
   </footer>
-  <div class="copy-rights text-center">
-    <div class="container">
-      <small>all &copy; copyrights reserved to </small><br> <small>front-ended by islam saeed may 2019 </small>
+  <div class="scroller py-1">
+    <div class="scrollUp text-center">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+  <div class="loader">
+    <div class="lds-facebook">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
   <!-- Bootstrap core JavaScript
@@ -489,6 +580,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="JS/jquery-3.4.0.min.js"></script>
   <script src="JS/popper.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="JS/bootstrap.min.js"></script>
   <script src="JS/plugins.js"></script>

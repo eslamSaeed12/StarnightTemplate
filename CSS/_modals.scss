@@ -1,0 +1,55 @@
+
+
+
+.modal-signIn{
+    color:$third-clr;
+
+    .modal-content{
+        background-color: $section-clr1;
+    }
+    small a{
+        
+        color:$section-clr2;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+    .btn-secondary{
+        background-color: $section-clr3;
+        border-color: $section-clr3;
+        border-radius: 2em;
+        color:$section-clr1;
+    }
+    .btn-primary{
+        background-color: $section-clr3;
+        border-color: $section-clr3;
+        &:active{
+            border-color: $section-clr3 !important;
+            box-shadow: 0 0 0 0.2rem rgba(248, 232, 9, 0.5) !important;
+            color:$section-clr3 !important;
+        }
+        &:focus{
+            box-shadow: 0 0 0 0.2rem rgba(248, 232, 9, 0.5) !important;
+        }
+    }
+    .form-control{
+        &:focus{
+            box-shadow: unset !important;
+        }
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+        border-color: $section-clr3 !important;
+        box-shadow: 0 0 0 0.2rem rgba(248, 232, 9, 0.5) !important;
+        background-color: transparent !important;
+        color:$section-clr3 !important;
+    }
+    .btn-secondary:focus{
+        box-shadow: 0 0 0 0.2rem rgba(248, 232, 9, 0.5) !important;
+    }
+}
+
+.modal-signup{
+    .modal-content{
+        color:$third-clr !important;
+        background-color: $section-clr1;
+    }
+}

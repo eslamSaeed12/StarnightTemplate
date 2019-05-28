@@ -1,24 +1,22 @@
 //variables 
 
-
-
 // main colors 
-$section-clr1:#344D5C;
-$section-clr2:#DF4B4D;
-$section-clr3:#B05153;
-$section-clr4:#875257;
+$section-clr1:#EEEE;
+$section-clr2:#17A68C;
+$section-clr3:#F2B90C;
+$section-clr4:#8C451C;
+$section-clr5:#F2636F;
+$section-clr6:#8C451C;
+$section-clr7:#F2CB05;
 // fonts colors  
-$main-clr:#ECF0F1;
-$secod-clr:#344D5C;
+$main-clr:#F2F2F2;
+$secod-clr:#a9a9a9;
+$third-clr:#485460;
 // buttons colors 
-$btn-clr1:#875257;
-$btn-clr2:#344D5C;
+$btn-clr1:#7CA58E;
+$btn-clr2:#0d2c49;
 // hovers colors 
-$hvr-clr1:#344D5C;
-$hvr-clr2:#DF4B4D;
-
-// 
-
+$hvr-clr1:#8C4B46;
 
 // import components from sass folder 
 
@@ -26,25 +24,39 @@ $hvr-clr2:#DF4B4D;
 @import '_hdr';
 @import '_sctns';
 @import '_autoHideNav';
-
+@import '_modals';
+@import '_signup';
 // some variables tags 
 .cptl {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
 }
 
 .uprCase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
-body{
-    
-        color:$main-clr !important;
-        font-family: 'Libre Franklin', sans-serif;
-    
+.lowCase {
+    text-transform: lowercase !important;
 }
 
-.contrast-p{
+body {
+    color: $main-clr !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+.lead {
+    font-size: 1rem;
+}
+.modal
+{
+    z-index: 999999;
+}
+.contrast-p {
     font-weight: 350;
+}
+
+.section-clr2 {
+    color: $section-clr3 !important;
 }
 
 

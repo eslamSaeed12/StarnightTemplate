@@ -1,0 +1,115 @@
+@import '_media_md.scss';
+//variables 
+
+// main colors 
+$section-clr1:#EEEE;
+$section-clr2:#17A68C;
+$section-clr3:#F2B90C;
+$section-clr4:#8C451C;
+$section-clr5:#F2636F;
+$section-clr6:#8C451C;
+$section-clr7:#F2CB05;
+// fonts colors  
+$main-clr:#F2F2F2;
+$secod-clr:#a9a9a9;
+$third-clr:#485460;
+// buttons colors 
+$btn-clr1:#7CA58E;
+$btn-clr2:#0d2c49;
+// hovers colors 
+$hvr-clr1:#8C4B46;
+
+body {
+    transition: background-color .5s;
+}
+
+#ascrail2000,
+.nicescroll-rails {
+    z-index: 9999 !important;
+}
+
+
+.secondery-navbar {
+    width: 0;
+    position: fixed;
+    height: 100vh;
+    z-index: 11111;
+    top: 0;
+    left: 0;
+    background-color: $third-clr;
+    color: $section-clr1;
+    overflow-x: hidden;
+    padding-top: 3em;
+    transition: 0.5s ease-in;
+    li{
+        padding:0.5em;
+        text-transform: capitalize;
+        font-size: 1.2em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $section-clr1;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+        }
+        &:active{
+            color:#F2B90C;
+        }
+
+
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        transition: 0.2s;
+        opacity: 0.6;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+
+.secondery-navbar-open {
+
+    display: none;
+    z-index: 555;
+
+    i {
+        padding: 0.75em 0.75em;
+        background: $section-clr1;
+        color: #000;
+        border-radius: 2em;
+        box-shadow: 0.5px 2.5px 8.5px 1.5px black;
+        text-align: right;
+        font-size: 1.5em;
+    }
+
+}
+
+@media(max-width:767px) {
+    .secondery-navbar {
+        display: block;
+    }
+
+    .nav-Toggler-aside {
+
+        width: 190px;
+        z-index: 55555;
+    }
+
+    .secondery-navbar-open {
+        display: block;
+        z-index: 44444;        
+    }
+    .hvr-underline-from-left::before{
+        background: #F2F2F2;
+    }
+}

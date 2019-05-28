@@ -2,57 +2,42 @@
 
 // first section
 
-.needHelp {
-  position: fixed;
-  width: 50px;
-  //background-color: $section-clr2;
-  border-color: $secod-clr;
+
+
+
+.menu-toggler-aside {
+
+  z-index: 99999;
+  color: $third-clr;
+  padding: 0.50em 0.75em;
+  top: 3.5vh;
+  left: 2vw;
+  background: #FFFF;
   border-radius: 2em;
-  right: 0.5%;
-  top: 50%;
-  color: $main-clr;
-  transition: all 0.2s ease-in;
+  box-shadow: 0.5px 0.5px 5.5px 0.5px $third-clr;
 
   i {
-    font-size: 2em;
-    cursor: pointer;
-    transition: all 0.1s ease-in;
-    opacity: 0.6;
-  }
-
-  .tog-i {
-    opacity: 1;
-  }
-
-  .tgc {
-    color: $secod-clr !important;
-  }
-
-  ul {
-    li {
-      direction: rtl;
-      transition: all 0.2s ease-in;
-      text-transform: none;
-      font-size: small;
-      opacity: 0.6;
-      margin: 0.5em;
-      list-style: none;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
+    font-size: 1em;
+    margin-top: 5px;
+    color: $section-clr3;
+    font-weight: bold;
   }
 }
 
-
-.dark-background {
-  background: $section-clr2;
+.navbar {
+  padding: {
+    top: 0 !important;
+    bottom: 0 !important;
+  }
 }
+
+// section download 
 
 .section.one {
-  min-height: 700px;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $section-clr5;
+  color: $main-clr !important;
 
   .btn {
     color: $main-clr;
@@ -82,9 +67,6 @@
     margin-top: -2em;
   }
 
-  .lead {
-    font-size: 1rem;
-  }
 
   button:hover i[class="fab fa-android"] {
     color: #a3c439;
@@ -111,10 +93,15 @@
   }
 }
 
+// end section download 
+
+// start section ourclients 
+
 .sectionTwo {
 
-  min-height: 700px;
-  background-color: $secod-clr;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #F2B90C;
 
   img {
     width: 300px;
@@ -122,12 +109,12 @@
     display: inline-block;
     //background: $main-clr;
     border-radius: 50%;
-    border: 2px solid $main-clr;
+    box-shadow: 3px 3px 10px 10px #ffffff8a;
     transition: all 0.25s ease;
 
     &:hover {
       //opacity: 0.7;
-      filter: grayscale(100%);
+      filter: blur(0.8px)
     }
   }
 
@@ -143,10 +130,7 @@
     display: none !important;
   }
 
-  .lead {
-    font-size: 1em;
 
-  }
 
   .slick-slide,
   .slick-current,
@@ -155,26 +139,24 @@
   }
 }
 
+// end our cleintes section 
+
 .main-clr {
   background-color: $main-clr;
 }
 
+
+
+// start features section 
+
 .sectionThree {
-  max-height: 700px;
+  min-height: 100vh;
+  background-color: $section-clr2;
+  color: $third-clr !important;
   overflow: hidden;
-  background: url("../IMGS/astronomy-cosmos-dark-733475.jpg") no-repeat fixed;
-  background-position: center;
-  background-size: cover;
-  color: $main-clr;
 
   .container-fluid {
-    background-color: rgba(52, 77, 92, 0.700);
-    height: 100%;
-    padding: 3rem !important;
-  }
-
-  .lead {
-    font-size: 1em;
+    min-height: 100vh;
   }
 
   .h5 {
@@ -190,9 +172,9 @@
   }
 
   .btn-primary {
-    background-color: $section-clr2;
+    background-color: $section-clr5;
     border-radius: 2em;
-    border: 3px solid $section-clr2;
+    border: 3px solid $section-clr5;
   }
 
   .btn-primary:not(:disabled):not(.disabled).active,
@@ -200,25 +182,34 @@
   .show>.btn-primary.dropdown-toggle {
     background-color: $main-clr;
     border-color: $main-clr;
-    color: $secod-clr;
+    color: $section-clr5;
   }
 
   .btn-primary:not(:disabled):not(.disabled).active:focus,
   .btn-primary:not(:disabled):not(.disabled):active:focus,
   .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(223, 75, 77, 0.274);
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 109, 0.5);
   }
 
   .btn-primary.focus,
   .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(223, 75, 77, 0.274);
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 109, 0.5);
   }
 }
 
+
+// section price scetion 
+
 .section4 {
-  color: $secod-clr;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $main-clr;
+  color: $btn-clr2;
   text-transform: capitalize;
-  background-color: $main-clr;
+
+  .badge-secondary {
+    background-color: $section-clr3;
+  }
 
   a {
     color: $secod-clr;
@@ -227,90 +218,325 @@
 
   button {
     text-transform: uppercase;
-    background-color: $section-clr2;
-    border-color: $section-clr2;
+    background-color: $section-clr3;
+    border-color: $section-clr3;
     z-index: 5555;
+    border-radius: 2em;
+
   }
 
   li.active {
-    background: $section-clr1;
-    border-color: $section-clr1;
+
     text-transform: uppercase;
   }
 
 }
 
+button.free {
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(9, 232, 248, 0.5) !important;
+  }
+
+  &:active {
+    background-color: $main-clr !important;
+    border-color: $section-clr2 !important;
+    color: $section-clr2 !important;
+  }
+}
+
+button.premium {
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 101, 0.5);
+    background-color: $section-clr5;
+  }
+
+  &:active {
+    background-color: $main-clr !important;
+    border-color: $section-clr5 !important;
+    color: $section-clr5 !important;
+  }
+}
+
+button.standard {
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(224, 248, 9, 0.5) !important;
+    background-color: $section-clr3;
+  }
+
+  &:active {
+    background-color: $main-clr !important;
+    border-color: $section-clr3 !important;
+    color: $section-clr3 !important;
+  }
+
+}
+
+.free {
+  background: $section-clr2 !important;
+  border-color: $section-clr2 !important;
+
+}
+
+.premium {
+  background: $section-clr5 !important;
+  border-color: $section-clr5 !important;
+}
+
+.standard {
+  background: $section-clr3 !important;
+  border-color: $section-clr3 !important;
+}
+
+// end price section 
+
+.cust-card {
+  color: $main-clr;
+  padding: 1rem;
+
+  //border-radius: 4em;
+  // box-shadow: 2px 2px 2px 2px $section-clr1;
+  i {
+    color: $main-clr !important;
+    font-size: 5rem;
+  }
+
+  h3 {
+    color: $main-clr;
+  }
+}
+
+.cust-hed {
+
+  background-color: unset !important;
+  color: $main-clr;
+  padding: 1rem;
+  border-radius: 2em;
+
+}
+
+
+// start form contact section 
+
 .sectionFive {
-  color: $section-clr2;
-  max-height: 700px;
+  color: #000 !important;
+  background-color: $section-clr7;
+  min-height: 100vh;
+
+  form textarea {
+    min-height: 150px;
+    max-height: 200px;
+  }
 
   .btn-primary {
-    background-color: $section-clr2;
-    border-color: $section-clr2;
-    margin-top:15px;
+    background-color: $section-clr5;
+    border-color: $section-clr5;
+    margin-top: 15px;
     border-radius: 2em;
+
     &:active {
       background-color: $main-clr !important;
       border-color: $main-clr !important;
-      color: $section-clr2 !important;
-
+      color: $section-clr5 !important;
     }
 
     &:focus {
-      box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
+      box-shadow: 0 0 0 0.2rem rgba(248, 9, 121, 0.5);
     }
 
+  }
+
+  i {
+    font-size: 4em;
   }
 
   .btn-primary:not(:disabled):not(.disabled).active:focus,
   .btn-primary:not(:disabled):not(.disabled):active:focus,
   .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 121, 0.5);
   }
-  .form-control:focus{
-    box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5);
-    border-color: $section-clr2;
+
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 121, 0.5);
+    border-color: $section-clr3;
   }
-  .lead{
-    line-height: 3;
-  }
+
 }
 
-footer{
-  background: $section-clr1;
+// end last section >  form contact  
 
-  .list-group-item{
-    padding-left:0 !important;
+// start footer
+
+footer {
+  background: $section-clr1 !important;
+  color: #000;
+
+  .list-group-item {
+    padding-left: 0 !important;
   }
-  .list-group li{
+
+  .list-group li {
     background: transparent;
-    border:none;
+    border: none;
     opacity: 0.8;
-    a{
-      color:$main-clr;
+
+    a {
+      color: #000;
     }
-  } 
-  .nav a{
-    color:$main-clr;
+  }
+
+  .sitemap li {
+    display: block !important;
+  }
+
+  .nav a {
+    color: #000;
     opacity: 0.8;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
-  i{
-    font-size:1.5em;
+
+  i {
+    font-size: 1.5em;
   }
-  small{
+
+  small {
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
-  .social-foter a{
+
+  .social-foter a {
     font-size: small;
   }
 
+  form {
+    position: relative;
+
+    button {
+
+      border: none;
+      background: transparent;
+      position: absolute !important;
+      top: 50px;
+      right: 2.5px;
+
+      i {
+        color: $section-clr5;
+        opacity: 0.5;
+        transition: all 0.2s ease;
+        font-size: medium;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 9, 121, 0.5);
+    border-color: $section-clr5;
+  }
+
 }
-.copy-rights{
-background-color: rgb(36, 52, 63);
+
+// end footer 
+
+// start copy rights
+
+.copy-rights {
+  background-color: #eee;
+  color: #000;
 }
+
+.scroller {
+  overflow: hidden;
+  position: fixed;
+  right: 3vw;
+  bottom: -50px;
+  transition: all 0.2s ease;
+  background: $third-clr !important;
+  border-radius:2em;
+  box-shadow: 0.5px -0.5px 5.5px 0.5px black;
+
+  i {
+    font-size: 1em;
+    color: $main-clr;
+    padding:0.50em 0.75em;
+  }
+}
+
+.showme {
+  height: auto;
+  bottom: 10px;
+}
+
+.h-0 {
+  height: 0;
+  overflow: hidden;
+}
+
+.up-100 {
+  font-size: medium;
+}
+
+.fix-header-flow{
+  overflow: hidden !important;
+}
+
+  .loader{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: #000;
+    z-index: 99999999;
+  }
+
+
+  .lds-facebook {
+    display:inline-block;
+    position: fixed;
+    top:50%;
+    left:45%;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: $section-clr3;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }

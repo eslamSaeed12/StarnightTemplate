@@ -1,0 +1,275 @@
+@media (min-width: 768px) {
+  header .bt-rds {
+    font-size: 1em;
+  }
+  header button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+    font-size: 1em;
+    padding: 0.5em 0.6em;
+  }
+
+  .button-price-try-container {
+    padding-bottom: 3em;
+  }
+
+  .text-center-md {
+    padding-left: 4vw !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .navheader {
+    overflow: visible;
+  }
+
+  .nav-Toggler-aside {
+    width: 150px;
+  }
+
+  .handle-menu-md {
+    display: block !important;
+  }
+
+  .handle-menu-md-h {
+    display: none !important;
+  }
+
+  header .bt-rds {
+    font-size: 1em;
+  }
+  header button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+    font-size: 1em;
+    padding: 0.5em 0.6em;
+  }
+
+  .button-price-try-container {
+    padding-bottom: 3em;
+  }
+
+  .signup-section .forma {
+    border-right: none;
+  }
+
+  .hide-on-sm {
+    display: none;
+  }
+
+  .navbar-normal {
+    display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .navheader {
+    overflow: visible;
+  }
+
+  .handle-menu-md {
+    display: block !important;
+  }
+
+  .handle-menu-md-h {
+    display: none !important;
+  }
+
+  .navbar-normal {
+    display: none !important;
+  }
+
+  .menu-toggler-aside {
+    display: none !important;
+  }
+
+  header .bt-rds {
+    font-size: 1em;
+    padding: 2.4vw;
+  }
+  header button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+    font-size: 1em;
+    padding: 0.5em 0.6em;
+  }
+
+  .button-price-try-container {
+    padding-bottom: 3em;
+  }
+
+  .dark-background {
+    text-align: center;
+  }
+  .dark-background .bttn-container {
+    text-align: center !important;
+  }
+
+  .price-list {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+
+  .mid-price-list {
+    margin: auto !important;
+    margin-top: 2em !important;
+    margin-bottom: 2em;
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+
+  .mg-prob {
+    margin-bottom: 2vh;
+  }
+
+  footer .navheader {
+    overflow: visible;
+  }
+  footer .handle-menu-md {
+    display: block !important;
+  }
+  footer .handle-menu-md-h {
+    display: none !important;
+  }
+  footer .container {
+    text-align: center;
+  }
+  footer .container .handle-mar {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  footer .container .handle-mar-faq {
+    margin-bottom: 4vh;
+  }
+  footer .container .social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer .container .hide-on-xs {
+    display: none !important;
+  }
+
+  .form-control {
+    margin-bottom: 5vh;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  .signup-section .forma {
+    border-right: none;
+  }
+
+  .hide-on-sm {
+    display: none;
+  }
+}
+@media (max-width: 1085px) {
+  .showme {
+    right: 10vw;
+  }
+
+  .menu-toggler-aside {
+    right: 3.5vw;
+    left: unset;
+    top: 3vh;
+  }
+
+  .navheader {
+    overflow: visible;
+  }
+
+  .handle-menu-md {
+    display: block !important;
+  }
+
+  .handle-menu-md-h {
+    display: none !important;
+  }
+
+  .navbar .dropdown-menu {
+    left: 27px;
+  }
+
+  .trn {
+    transition: all 0.3s ease-in;
+  }
+}
+body {
+  transition: background-color 0.5s;
+}
+
+#ascrail2000,
+.nicescroll-rails {
+  z-index: 9999 !important;
+}
+
+.secondery-navbar {
+  width: 0;
+  position: fixed;
+  height: 100vh;
+  z-index: 11111;
+  top: 0;
+  left: 0;
+  background-color: #485460;
+  color: #EEEE;
+  overflow-x: hidden;
+  padding-top: 3em;
+  transition: 0.5s ease-in;
+}
+.secondery-navbar li {
+  padding: 0.5em;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+.secondery-navbar a {
+  text-decoration: none;
+  color: #EEEE;
+  display: block;
+  transition: 0.3s;
+}
+.secondery-navbar a:active {
+  color: #F2B90C;
+}
+.secondery-navbar .btn-close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.2s;
+  opacity: 0.6;
+}
+.secondery-navbar .btn-close:hover {
+  opacity: 1;
+}
+
+.secondery-navbar-open {
+  display: none;
+  z-index: 555;
+}
+.secondery-navbar-open i {
+  padding: 0.75em 0.75em;
+  background: #EEEE;
+  color: #000;
+  border-radius: 2em;
+  box-shadow: 0.5px 2.5px 8.5px 1.5px black;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+@media (max-width: 767px) {
+  .secondery-navbar {
+    display: block;
+  }
+
+  .nav-Toggler-aside {
+    width: 190px;
+    z-index: 55555;
+  }
+
+  .secondery-navbar-open {
+    display: block;
+    z-index: 44444;
+  }
+
+  .hvr-underline-from-left::before {
+    background: #F2F2F2;
+  }
+}
+
+/*# sourceMappingURL=mainQueryHandle.css.map */

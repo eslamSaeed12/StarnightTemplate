@@ -1,0 +1,237 @@
+@media(min-width:768px) {
+
+    header {
+        .bt-rds {
+            font-size: 1em;
+        }
+
+        button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+            font-size: 1em;
+            padding: 0.5em 0.6em;
+        }
+    }
+
+
+    .button-price-try-container {
+        padding-bottom: 3em;
+    }
+
+    .text-center-md {
+        padding-left: 4vw !important;
+    }
+}
+
+
+@media(min-width:576px) and (max-width:768px) {
+    .navheader {
+        overflow: visible;
+    }
+
+    .nav-Toggler-aside {
+
+        width: 150px;
+    }
+
+    .handle-menu-md {
+        display: block !important;
+    }
+
+    .handle-menu-md-h {
+        display: none !important;
+    }
+
+    header {
+        .bt-rds {
+            font-size: 1em;
+        }
+
+        button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+            font-size: 1em;
+            padding: 0.5em 0.6em;
+        }
+    }
+
+    .button-price-try-container {
+        padding-bottom: 3em;
+    }
+
+    .signup-section .forma {
+        border-right: none;
+    }
+
+    .hide-on-sm {
+        display: none;
+    }
+
+    .navbar-normal {
+        display: none !important;
+    }
+}
+
+
+
+@media(max-width:575px) {
+    .navheader {
+        overflow: visible;
+    }
+
+    .handle-menu-md {
+        display: block !important;
+    }
+
+    .handle-menu-md-h {
+        display: none !important;
+    }
+
+    .navbar-normal {
+        display: none !important;
+    }
+
+    .menu-toggler-aside {
+        display: none !important;
+    }
+
+    header {
+        .bt-rds {
+            font-size: 1em;
+            padding: 2.4vw;
+        }
+
+        button.btn.btn-primary.ml-2.app-down.cptl.hvr-grow.btn-lg.start-now {
+            font-size: 1em;
+            padding: 0.5em 0.6em;
+        }
+    }
+
+    .button-price-try-container {
+        padding-bottom: 3em;
+    }
+
+    .dark-background {
+        text-align: center;
+
+        .bttn-container {
+            text-align: center !important;
+        }
+    }
+
+    .price-list {
+        padding: {
+            right: 10vw;
+            left: 10vw;
+        }
+    }
+
+    .mid-price-list {
+        margin: auto !important;
+        margin-top: 2em !important;
+        margin-bottom: 2em;
+
+        padding: {
+            right: 10vw;
+            left: 10vw;
+        }
+    }
+
+    .mg-prob {
+
+        margin-bottom: 2vh;
+    }
+
+    footer {
+        .navheader {
+            overflow: visible;
+        }
+
+        .handle-menu-md {
+            display: block !important;
+        }
+
+        .handle-menu-md-h {
+            display: none !important;
+        }
+
+        .container {
+            text-align: center;
+
+
+            .handle-mar {
+
+                margin: {
+                    top: 4vh;
+                    bottom: 4vh;
+                }
+            }
+
+            .handle-mar-faq {
+                margin: {
+                    bottom: 4vh;
+                }
+            }
+
+            // hide social media links in mobile view 
+            .social-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+            }
+
+            .hide-on-xs {
+                display: none !important;
+            }
+        }
+
+    }
+
+    .form-control {
+        margin-bottom: 5vh;
+    }
+
+    .text-sm-center {
+
+        text-align: center;
+    }
+
+    .signup-section .forma {
+        border-right: none;
+    }
+
+    .hide-on-sm {
+        display: none;
+    }
+}
+
+
+@media (max-width:1085px) {
+    .showme{
+        right: 10vw;
+    }
+    .menu-toggler-aside {
+        right: 3.5vw;
+        left: unset;
+        top: 3vh;
+    }
+
+    .navheader {
+        overflow: visible;
+    }
+
+    .handle-menu-md {
+        display: block !important;
+    }
+
+    .handle-menu-md-h {
+        display: none !important;
+    }
+
+    .navbar {
+        .dropdown-menu {
+            left: 27px;
+        }
+    }
+    .trn{
+        transition: all 0.3s ease-in;
+    }
+
+}

@@ -1,8 +1,27 @@
 $(document).ready(function () {
+
+
+  window.addEventListener("load", function () {
+    window.scroll({
+      top: window.scrollY - 0.25,
+      behavior: "smooth"
+    })
+  })
+
+  // body nice scroll 
+
+  $("body").niceScroll({
+
+    cursorcolor: "#0d2c49",
+    cursorwidth: "20px",
+    cursorborderradius: 0
+  });
+
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
-
 
   //  some responsive
   window.onload = function () {
@@ -36,25 +55,54 @@ $(document).ready(function () {
   });
 
   $(".slick-dots").addClass("mt-3");
+  /* 
+        let navbar = document.querySelector(".navheader");
+        
+          // autonavbar
+          window.onload = () => {
+            if (window.scrollY > 700) {
+              navbar.style.height = 80 + "px";
+            } else {
+              //navbar.style.height = 0;
+              navbar.style.top = "-100" + "px";
+            }
+          }; 
 
-  let navbar = document.querySelector(".navheader");
+        
+          var prevScrollpos = window.pageYOffset;
+          window.onscroll = function () {
+            if (window.scrollY > 700) {
+              navbar.style.height = 80 + "px";
+              var currentScrollPos = window.pageYOffset;
 
-  // autonavbar
-  window.onload = () => {
+              if (prevScrollpos < currentScrollPos) {
+                navbar.style.top = "-100" + "px";
+              } else {
+                navbar.style.top = 0;
+              }
+              prevScrollpos = currentScrollPos;
+            } else {
+              navbar.style.height = 0;
+            }
+          }; */
+});
 
-    if (window.scrollY > 700) {
-      navbar.style.height = 80 + "px";
-    } else {
-      navbar.style.height = 0;
-    }
-  };
-  var prevScrollpos = window.pageYOffset;
+
+
+let navbar = document.querySelector(".navheader");
+var prevScrollpos = window.pageYOffset;
+
+window.addEventListener("scroll", autoHideFunc);
+
+function autoHideFunc() {
   window.onscroll = function () {
+
     if (window.scrollY > 700) {
       navbar.style.height = 80 + "px";
       var currentScrollPos = window.pageYOffset;
 
       if (prevScrollpos < currentScrollPos) {
+
         navbar.style.top = "-100" + "px";
       } else {
         navbar.style.top = 0;
@@ -63,68 +111,183 @@ $(document).ready(function () {
     } else {
       navbar.style.height = 0;
     }
-  };
-});
-
-var li = document.querySelectorAll(".needHelp ul li");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 260 && window.scrollY < 1000) {
-
-    li[0].classList.add("tog-i", "font-weight-bold")
-  } else {
-    li[0].classList.remove("tog-i", "font-weight-bold")
   }
-  if (window.scrollY > 1000 && window.scrollY < 1670) {
-
-    li[1].classList.add("tog-i", "font-weight-bold")
-  } else {
-    li[1].classList.remove("tog-i", "font-weight-bold")
-  }
-  if (window.scrollY > 1670 && window.scrollY < 2305) {
-    li[2].classList.add("tog-i", "font-weight-bold")
-
-  } else {
-    li[2].classList.remove("tog-i", "font-weight-bold")
-  }
-  if (window.scrollY > 2305 && window.scrollY < 2900) {
-    li[3].classList.add("tog-i", "font-weight-bold")
-
-  } else {
-    li[3].classList.remove("tog-i", "font-weight-bold")
-  }
-  if (window.scrollY > 2900 && window.scrollY < 3400) {
-    li[4].classList.add("tog-i", "font-weight-bold")
-
-  } else {
-    li[4].classList.remove("tog-i", "font-weight-bold")
-  }
-  
-})
-
-window.addEventListener("scroll", () => {
-  var helpIcon = document.querySelector(".fa-question-circle");
-  if (window.pageYOffset > 2305) {
-    helpIcon.classList.add("tgc");
-    li.forEach((itm) => {
-      itm.classList.add("tgc");
-    })
-  } else {
-    helpIcon.classList.remove("tgc");
-    li.forEach((itm) => {
-      itm.classList.remove("tgc");
-    })
-  }
-})
+}
 
 
 function stopSub() {
   let eve = document.querySelector(".submit");
-  eve.addEventListener("click", (event) => {
-    event.preventDefault();
-  }, false)
+  eve.addEventListener(
+    "click",
+    event => {
+      event.preventDefault();
+    },
+    false
+  );
 }
 stopSub();
 
+window.addEventListener("load", () => {
+  if (window.scrollY > 3600) {
+    $(".scroller").addClass("showme");
+  } else {
+    $(".scroller").removeClass("showme");
+  }
+});
 
-console.log(window.pageYOffset)
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 3600) {
+    $(".scroller").addClass("showme");
+  } else {
+    $(".scroller").removeClass("showme");
+  }
+});
+
+function widgets() {
+  $(".fa-question-circle").click(function () {
+    $(".srch-Input").toggleClass("search-animation");
+  });
+}
+widgets();
+
+// scrolling
+
+$("#contact").click(function () {
+  window.scroll({
+    top: 3490,
+    behavior: "smooth"
+  });
+});
+$("#feat").click(function () {
+  window.scroll({
+    top: 2782,
+    behavior: "smooth"
+  });
+});
+
+$("#prices").click(function () {
+  window.scroll({
+    top: 2060,
+    behavior: "smooth"
+  });
+});
+$("#clients").click(function () {
+  window.scroll({
+    top: 1420,
+    behavior: "smooth"
+  });
+});
+$("#download").click(function () {
+  window.scroll({
+    top: 702,
+    behavior: "smooth"
+  });
+});
+$(".scroller .scrollUp .fa-arrow-up").click(function () {
+  window.scroll({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+$(".start-now").click(function () {
+  window.scroll({
+    top: 702,
+    behavior: "smooth"
+  });
+});
+
+// open anc close sign in modal 
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+
+function linkScroll(link, scrolSize) {
+  window.scroll({
+    top: scrolSize,
+    behavior: "smooth"
+  })
+}
+
+
+
+// handle menu side toggler when no have to use it 
+
+window.addEventListener("load", function () {
+  if (window.scrollY < 702) {
+    $(".menu-toggler-aside").fadeOut()
+  } else {
+    $(".menu-toggler-aside").fadeIn()
+  }
+})
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY < 702) {
+    $(".menu-toggler-aside").fadeOut()
+  } else {
+    $(".menu-toggler-aside").fadeIn()
+  }
+})
+$(".menu-toggler-aside i").click(function () {
+  $(".navbar").fadeToggle("fast")
+  window.scroll({
+    top: window.pageYOffset - 0.5,
+    behavior: "smooth"
+  })
+})
+
+//menu toogle better user experince better usability 
+
+// some responsive 
+
+// menu from left
+
+function leftMenuOpen() {
+  let containerMenu = document.getElementById("mySidenav");
+  containerMenu.style.width = "250px";
+}
+
+function leftMenuClose() {
+  $(".secondery-navbar").toggleClass("nav-Toggler-aside");
+}
+
+// side nav toggle 
+
+function navToggle() {
+
+  $(".secondery-navbar").toggleClass("nav-Toggler-aside");
+
+}
+
+window.addEventListener("load", function () {
+
+  if (window.scrollY < 700) {
+    $(".menu-trigger").css("display", "none");
+  } else {
+    $(".menu-trigger").css("display", "block");
+  }
+})
+
+window.addEventListener("scroll", function () {
+
+  if (window.scrollY < 700) {
+    $(".menu-trigger").css("display", "none");
+  } else {
+    $(".menu-trigger").css("display", "block");
+  }
+})
+
+var handleOverFlow = $(".navbar-normal");
+
+
+
+$(".dropdown-toggle").click(function () {
+  $(".navheader").toggleClass("fix-header-flow")
+})
+
+
+$(window).on("load", function () {
+  //$(".lds-facebook").fadeOut();
+  $(".loader").fadeOut(3000)
+})
