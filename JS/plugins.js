@@ -289,5 +289,5 @@ $(".dropdown-toggle").click(function () {
 
 $(window).on("load", function () {
   //$(".lds-facebook").fadeOut();
-  $(".loader").fadeOut(3000)
+  $(".loader").fadeOut()
 })
